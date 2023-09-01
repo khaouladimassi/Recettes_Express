@@ -62,12 +62,12 @@ class _FavoritesPageState extends State<FavoritesPage> {
             final recipeTitle = favorite[index];
             return InkWell(
               onTap: () {
-                Navigator.push(
+               /*  Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => FoodDetail(fooddata: recipeTitle),
+                    builder: (context) => FoodDetail(),
                   ),
-                );
+                ); */
               },
               child: Container(
                 padding: EdgeInsets.all(10),

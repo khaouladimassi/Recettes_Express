@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class FoodDetail extends StatefulWidget {
-  const FoodDetail({Key? key, required this.fooddata}) : super(key: key);
+  const FoodDetail({Key? key, this.fooddata}) : super(key: key);
 
   final dynamic fooddata;
   @override
@@ -133,7 +133,7 @@ class _FoodDetailState extends State<FoodDetail> {
                           onPressed: toggleFavoriteStatus,
                         ),
                         SizedBox(
-                          width: 280,
+                          width: MediaQuery.of(context).size.width * 0.68,
                         ),
                         Image(
                           image: AssetImage("assets/personne.png"),
@@ -186,7 +186,8 @@ class _FoodDetailState extends State<FoodDetail> {
                           ),
                           SizedBox(width: 110),
                           Text(
-                            widget.fooddata['commentaires'] ?? 'Aucune évaluation',
+                            widget.fooddata['commentaires'] ??
+                                'Aucune évaluation',
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
@@ -240,7 +241,8 @@ class _FoodDetailState extends State<FoodDetail> {
                                           padding: const EdgeInsets.fromLTRB(
                                               0, 0, 0, 0),
                                           child: Text(
-                                            widget.fooddata['preparation'] ?? 'Aucune évaluation',
+                                            widget.fooddata['preparation'] ??
+                                                'Aucune évaluation',
                                             style: TextStyle(
                                               fontSize: 15.5,
                                               letterSpacing: 0.4,
@@ -268,7 +270,8 @@ class _FoodDetailState extends State<FoodDetail> {
                                           padding: const EdgeInsets.fromLTRB(
                                               10, 3, 0, 0),
                                           child: Text(
-                                            widget.fooddata['caloris'] ?? 'Aucune évaluation',
+                                            widget.fooddata['caloris'] ??
+                                                'Aucune évaluation',
                                             style: TextStyle(
                                               fontSize: 15.5,
                                               letterSpacing: 1,
@@ -293,7 +296,8 @@ class _FoodDetailState extends State<FoodDetail> {
                                         ),
                                         SizedBox(height: 14),
                                         Text(
-                                          widget.fooddata['cuisson'] ?? 'Aucune évaluation',
+                                          widget.fooddata['cuisson'] ??
+                                              'Aucune évaluation',
                                           style: TextStyle(
                                             fontSize: 16,
                                             letterSpacing: 1,
@@ -317,7 +321,8 @@ class _FoodDetailState extends State<FoodDetail> {
                                         ),
                                         SizedBox(height: 14),
                                         Text(
-                                          widget.fooddata['prix'] ?? 'Aucune évaluation',
+                                          widget.fooddata['prix'] ??
+                                              'Aucune évaluation',
                                           style: TextStyle(
                                             fontSize: 16,
                                             letterSpacing: 1,
